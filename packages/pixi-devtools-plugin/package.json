@@ -1,0 +1,21 @@
+{
+    "name": "@pixi-devtools/plugin",
+    "description": "Plugin for pixi.js",
+    "type": "module",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "watch": "vite build --watch",
+        "build": "tsc && vite build"
+    },
+    "dependencies": {
+        "pixi.js": "^8.0.2"
+    },
+    "devDependencies": {
+        "vite": "^5.1.6",
+        "typescript": "^5.4.2",
+        "@types/node": "^20.11.28",
+        "@types/pixi.js": "^5.0.0",
+        "vite-plugin-dts": "^3.7.3"
+    }
+}

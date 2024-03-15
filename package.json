@@ -1,0 +1,8 @@
+{
+    "name": "pixi-devtools",
+    "private": true,
+    "workspaces": [
+        "packages/*",
+        "examples/*"
+    ]
+}

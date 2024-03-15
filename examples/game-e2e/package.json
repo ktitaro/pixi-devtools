@@ -1,0 +1,13 @@
+{
+  "name": "game-e2e",
+  "private": true,
+  "scripts": {
+    "test": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:ci": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.42.1",
+    "@types/node": "^20.11.25"
+  }
+}
