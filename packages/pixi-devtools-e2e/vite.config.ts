@@ -16,6 +16,10 @@ export default defineConfig({
         },
         rollupOptions: {
             external: ['@playwright/test'],
+            output: {
+                entryFileNames: '[name].js',
+                assetFileNames: '[name][extname]',
+            },
         },
     },
 })

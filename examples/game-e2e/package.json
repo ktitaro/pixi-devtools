@@ -7,6 +7,9 @@
     "test:ui": "playwright test --ui",
     "test:ci": "playwright test"
   },
+  "dependencies": {
+    "@pixi-devtools/e2e": "*"
+  },
   "devDependencies": {
     "@playwright/test": "^1.42.1",
     "@types/node": "^20.11.25"

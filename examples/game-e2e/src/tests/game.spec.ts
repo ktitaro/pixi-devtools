@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test'
+import { clickWidgetByName } from '@pixi-devtools/e2e'
 
 // An async version of setTimeout that we can use to suspend execution
 // for the given number of milliseconds. Very usefull to actually see
@@ -12,7 +13,7 @@ test('Button has a correct label', async ({ page }) => {
     const label = await page.evaluate(() => {
         const appWidget = window['__APP__'].stage
         const btnWidget = appWidget.getChildByName('PlayButton', true)
-        const textWidget = btnWidget.getChildAt(1)
+        const textWidget = (btnWidget as any).getChildAt(1)
         return textWidget.text
     })
 
@@ -23,20 +24,23 @@ test('After button click we move to another screen', async ({ page }) => {
     await page.goto('/')
     await sleep(1000)
 
-    const btnPosition = await page.evaluate(() => {
-        const appWidget = window['__APP__'].stage
-        const btnWidget = appWidget.getChildByName('PlayButton', true)
-        return btnWidget.getGlobalPosition()
-    })
-
-    const { x, y } = btnPosition
-    await page.mouse.click(x, y)
+    await clickWidgetByName(page, 'PlayButton')
     await sleep(1000)
+
+    // const btnPosition = await page.evaluate(() => {
+    //     const appWidget = window['__APP__'].stage
+    //     const btnWidget = appWidget.getChildByName('PlayButton', true)
+    //     return (btnWidget as any).getGlobalPosition()
+    // })
+
+    // const { x, y } = btnPosition
+    // await page.mouse.click(x, y)
+    // await sleep(1000)
 
     const label = await page.evaluate(() => {
         const appWidget = window['__APP__'].stage
         const labelWidget = appWidget.getChildByName('GameLabel', true)
-        const textWidget = labelWidget.getChildAt(0)
+        const textWidget = (labelWidget as any).getChildAt(0)
         return textWidget.text
     })
 
