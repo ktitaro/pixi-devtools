@@ -1,8 +1,10 @@
 import * as PIXI from 'pixi.js'
 import { getWidgetByName } from '@pixi-devtools/api'
 import { getWidgetsByName } from '@pixi-devtools/api'
+import { cleanHightlights } from '@pixi-devtools/api'
 import { spotWidgetByName } from '@pixi-devtools/api'
 import { spotWidgetsByName } from '@pixi-devtools/api'
+import { spotWidgetBounds } from '@pixi-devtools/api'
 
 declare global {
     interface Window {
@@ -10,6 +12,8 @@ declare global {
         __PIXI_DEVTOOLS_METHODS__: {
             getWidgetByName: typeof getWidgetByName
             getWidgetsByName: typeof getWidgetsByName
+            cleanHightlights: typeof cleanHightlights
+            spotWidgetBounds: typeof spotWidgetBounds
             spotWidgetByName: typeof spotWidgetByName
             spotWidgetsByName: typeof spotWidgetsByName
         }

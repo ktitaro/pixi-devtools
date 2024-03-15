@@ -9,11 +9,10 @@ import { getWidgetBounds } from './getWidgetBounds'
  */
 function createBoundsRectHighlight(bounds: Bounds) {
     const elem = document.createElement('div')
-    elem.style.top = `${bounds.y}px`
-    elem.style.left = `${bounds.x}px`
     elem.style.width = `${bounds.width}px`
     elem.style.height = `${bounds.height}px`
     elem.style.border = '2px solid red'
+    elem.style.position = 'relative'
     return elem
 }
 
@@ -24,15 +23,15 @@ function createBoundsRectHighlight(bounds: Bounds) {
  */
 function createCenterPointHightlight(bounds: Bounds) {
     const elem = document.createElement('div')
-    const centerX = (bounds.x + bounds.width / 2)
-    const centerY = (bounds.y + bounds.height / 2)
-    elem.style.top = `${centerX}px`
-    elem.style.left = `${centerY}px`
+    const posX = (bounds.width / 2)
+    const posY = (bounds.height / 2)
+    elem.style.top = `${posY}px`
+    elem.style.left = `${posX}px`
     elem.style.width = '10px'
     elem.style.height = '10px'
-    elem.style.position = 'relative'
+    elem.style.position = 'absolute'
     elem.style.borderRadius = '999px'
-    elem.style.backgroundColor = 'green'
+    elem.style.backgroundColor = 'red'
     return elem
 }
 
@@ -42,14 +41,18 @@ function createCenterPointHightlight(bounds: Bounds) {
  * @returns - The DOM element responsible for the visual emphasis.
  */
 function createHightlight(bounds: Bounds) {
-    const container = document.createElement('div')
-    container.appendChild(createBoundsRectHighlight(bounds))
-    container.appendChild(createCenterPointHightlight(bounds))
-    container.classList.add('pixi-devtools-highlight')
-    container.style.zIndex = '9'.repeat(9)
-    container.style.position = 'absolute'
-    container.style.pointerEvents = 'none'
-    return container
+    const elem = document.createElement('div')
+    const posX = (bounds.x - (bounds.width / 2))
+    const posY = (bounds.y - (bounds.height / 2))
+    elem.appendChild(createBoundsRectHighlight(bounds))
+    elem.appendChild(createCenterPointHightlight(bounds))
+    elem.classList.add('pixi-devtools-highlight')
+    elem.style.top = `${posY}px`
+    elem.style.left = `${posX}px`
+    elem.style.zIndex = '9'.repeat(9)
+    elem.style.position = 'absolute'
+    elem.style.pointerEvents = 'none'
+    return elem
 }
 
 /**
