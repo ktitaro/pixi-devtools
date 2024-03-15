@@ -16,6 +16,10 @@ export default defineConfig({
         },
         rollupOptions: {
             external: ['pixi.js'],
+            output: {
+                entryFileNames: '[name].js',
+                assetFileNames: '[name][extname]',
+            },
         },
     },
 })
