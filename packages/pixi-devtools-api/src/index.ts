@@ -1,0 +1,7 @@
+export * from './functions/getWidgetBounds'
+export * from './functions/getWidgetByName'
+export * from './functions/getWidgetsByName'
+export * from './functions/spotWidgetBounds'
+export * from './functions/spotWidgetByName'
+export * from './functions/cleanHightlights'
+export * from './functions/spotWidgetsByName'

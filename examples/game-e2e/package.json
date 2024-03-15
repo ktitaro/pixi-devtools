@@ -1,5 +1,6 @@
 {
-  "name": "game-e2e",
+  "name": "@example/game-e2e",
+  "type": "module",
   "private": true,
   "scripts": {
     "test": "playwright test --headed",
