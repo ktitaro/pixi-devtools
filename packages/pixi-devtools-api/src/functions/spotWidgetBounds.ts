@@ -2,6 +2,11 @@ import { Bounds } from 'pixi.js'
 import { Container } from 'pixi.js'
 import { getWidgetBounds } from './getWidgetBounds'
 
+// Colors used for the visual emphasis.
+const COLOR_RED = 'rgba(255, 0, 0, .75)'
+const COLOR_BLUE = 'rgba(0, 0, 255, .75)'
+const COLOR_GREEN = 'rgba(0, 255, 0, .25)'
+
 /**
  * Generates a visual emphasis on the boundaries of a widget.
  * @param bounds - The dimensions and position to be emphasized.
@@ -11,7 +16,8 @@ function createBoundsRectHighlight(bounds: Bounds) {
     const elem = document.createElement('div')
     elem.style.width = `${bounds.width}px`
     elem.style.height = `${bounds.height}px`
-    elem.style.border = '2px solid red'
+    elem.style.border = `2px solid ${COLOR_RED}`
+    elem.style.backgroundColor = COLOR_GREEN
     elem.style.position = 'relative'
     return elem
 }
@@ -31,7 +37,7 @@ function createCenterPointHightlight(bounds: Bounds) {
     elem.style.height = '10px'
     elem.style.position = 'absolute'
     elem.style.borderRadius = '999px'
-    elem.style.backgroundColor = 'red'
+    elem.style.backgroundColor = COLOR_BLUE
     return elem
 }
 
