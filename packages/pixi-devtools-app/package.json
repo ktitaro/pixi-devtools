@@ -1,4 +1,9 @@
 {
     "name": "@pixi-devtools/app",
-    "description": "Browser extension"
+    "description": "Browser extension",
+    "private": true,
+    "scripts": {
+        "build": "",
+        "watch": ""
+    }
 }

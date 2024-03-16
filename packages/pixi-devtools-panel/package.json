@@ -1,4 +1,9 @@
 {
     "name": "@pixi-devtools/panel",
-    "description": "DevTools panel UI"
+    "description": "DevTools panel UI",
+    "private": true,
+    "scripts": {
+        "build": "",
+        "watch": ""
+    }
 }
