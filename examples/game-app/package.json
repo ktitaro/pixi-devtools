@@ -1,6 +1,6 @@
 {
   "name": "@example/game-app",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
   "private": true,
   "scripts": {
@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@pixi-devtools/plugin": "^0.0.1",
+    "@pixi-devtools/plugin": "^0.0.2",
     "normalize.css": "^8.0.1",
     "pixi.js": "^8.0.1"
   },

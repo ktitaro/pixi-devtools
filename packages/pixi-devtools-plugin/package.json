@@ -1,7 +1,7 @@
 {
     "name": "@pixi-devtools/plugin",
     "description": "Plugin for pixi.js",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "type": "module",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
@@ -10,7 +10,7 @@
         "build": "tsc && vite build"
     },
     "dependencies": {
-        "@pixi-devtools/api": "^0.0.1",
+        "@pixi-devtools/api": "^0.0.2",
         "pixi.js": "^8.0.2"
     },
     "devDependencies": {
