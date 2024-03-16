@@ -1,0 +1,1 @@
+/// <reference types="../../../packages/pixi-devtools-plugin/src/global.d.ts" />

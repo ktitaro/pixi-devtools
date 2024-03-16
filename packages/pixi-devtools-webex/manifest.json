@@ -1,0 +1,12 @@
+{
+    "manifest_version": 3,
+    "name": "pixi-devtools-webex",
+    "description": "Devtools for pixi.js",
+    "homepage_url": "https://github.com/ktitaro/pixi-devtools/",
+    "devtools_page": "./dist/index.html",
+    "version": "0.0.0",
+    "icons": {
+        "48": "./dist/favicon-32x32.png",
+        "128": "./dist/favicon-192x192.png"
+    }
+}

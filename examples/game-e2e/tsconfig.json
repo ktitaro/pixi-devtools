@@ -1,5 +1,5 @@
 {
-    "include": ["src", "../../packages/pixi-devtools-plugin/src/global.d.ts"],
+    "include": ["src"],
     "compilerOptions": {
         "strict": true,
         "target": "esnext",
