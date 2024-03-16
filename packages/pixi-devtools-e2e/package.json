@@ -10,10 +10,10 @@
         "build": "tsc && vite build"
     },
     "devDependencies": {
-        "vite": "^5.1.6",
-        "typescript": "^5.4.2",
+        "@playwright/test": "^1.42.1",
         "@types/node": "^20.11.28",
-        "vite-plugin-dts": "^3.7.3",
-        "@playwright/test": "^1.42.1"
+        "typescript": "^5.4.2",
+        "vite": "^5.1.6",
+        "vite-plugin-dts": "^3.7.3"
     }
 }

@@ -9,7 +9,7 @@
     "test:ci": "playwright test"
   },
   "dependencies": {
-    "@pixi-devtools/e2e": "*"
+    "@pixi-devtools/e2e": "^0.0.1"
   },
   "devDependencies": {
     "@playwright/test": "^1.42.1",

@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@pixi-devtools/plugin": "*",
+    "@pixi-devtools/plugin": "^0.0.1",
     "normalize.css": "^8.0.1",
     "pixi.js": "^8.0.1"
   },
